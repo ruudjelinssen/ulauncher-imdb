@@ -1,0 +1,20 @@
+{
+  "manifest_version": "2",
+  "api_version": "1",
+  "name": "IMDb",
+  "description": "Search IMDb with a simple keyword.",
+  "developer_name": "Ruud Linssen",
+  "icon": "images/icon.png",
+  "options": {
+    "query_debounce": 0.1
+  },
+  "preferences": [
+    {
+      "id": "imdb_kw",
+      "type": "keyword",
+      "name": "IMDb keyword",
+      "description": "IMDb search keyword",
+      "default_value": "imdb"
+    }
+  ]
+}
