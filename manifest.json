@@ -10,7 +10,7 @@
   },
   "preferences": [
     {
-      "id": "imdb_kw",
+      "id": "keyword",
       "type": "keyword",
       "name": "IMDb keyword",
       "description": "IMDb search keyword",
