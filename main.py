@@ -1,3 +1,7 @@
+"""
+The entry point of the extension.
+"""
+
 import logging
 
 from ulauncher.api.client.Extension import Extension
