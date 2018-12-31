@@ -3,6 +3,7 @@ The entry point of the extension.
 """
 
 import logging
+import urllib
 
 from ulauncher.api.client.Extension import Extension
 from ulauncher.api.client.EventListener import EventListener
@@ -13,6 +14,11 @@ from ulauncher.api.shared.action.OpenUrlAction import OpenUrlAction
 
 # Use this to log messages
 LOGGER = logging.getLogger(__name__)
+
+# URL encode
+def urlencode(qp):
+    return urllib.urlencode(qp)
+
 
 class IMDBExtension(Extension):
 
@@ -38,7 +44,9 @@ class KeywordQueryEventListener(EventListener):
                 name='Search on IMDb',
                 description='Search for "{}".'.format(event.get_argument()),
                 on_enter=OpenUrlAction(
-                    'https://www.imdb.com/find?q={}&s=all'.format(event.get_argument()))
+                    'https://www.imdb.com/find?{}'.format(
+                        urlencode({'q': event.get_argument(), 's': 'all'})
+                    ))
                 )
             )
 
