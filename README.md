@@ -12,5 +12,3 @@ Open ulauncher options and go to `Extensions` > `Add extension` and fill in `htt
 
 ## License
 The MIT License (MIT)
-
-Copyright (c) 2018 Ruud Linssen
