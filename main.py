@@ -3,7 +3,7 @@ The entry point of the extension.
 """
 
 import logging
-import urllib
+import urllib.parse
 
 from ulauncher.api.client.Extension import Extension
 from ulauncher.api.client.EventListener import EventListener
@@ -17,7 +17,7 @@ LOGGER = logging.getLogger(__name__)
 
 # URL encode
 def urlencode(qp):
-    return urllib.urlencode(qp)
+    return urllib.parse.urlencode(qp)
 
 
 class IMDBExtension(Extension):
